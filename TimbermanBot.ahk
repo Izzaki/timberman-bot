@@ -40,7 +40,6 @@ return
 
 #IfWinActive, ahk_exe TimbermanVS.exe
 $^1::
-
 	; normal
 	pointerLastAddress := MemoryReadPointer(hwnd, mono + monoOffset, "int", 4, 5, 0x28, 0x58, 0x30, 0x18, 0x8)
 	address := pointerLastAddress + 0x14
