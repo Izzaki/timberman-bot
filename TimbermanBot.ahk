@@ -22,18 +22,6 @@ $^r::
 	Reload
 return
 
-; $^2::
-; 	pointerLastAddress := MemoryReadPointer(hwnd, mono + monoOffset, "int", 4, 5, 0x28, 0x58, 0x30, 0x18, 0x8)
-; 	value := MemoryRead(hwnd, pointerLastAddress, "int", 1, 0x14)
-; 	msgbox 0x%pointerLastAddress%: %value%
-; return
-
-; $^3::
-; 	ControlSend,,{up down}, ahk_exe TimbermanVS.exe
-; 	sleep 100
-; 	ControlSend,,{up up}, ahk_exe TimbermanVS.exe
-; return
-
 $NumpadAdd::
 	delay := Max(delay - 10, 21)
 	; if (delay > 30) {
@@ -74,9 +62,6 @@ $^1::
 		}
 
 		send, %last%
-
-		Random, randomDelay, delay, delay + 100
-
-		sleep, %randomDelay%
+		sleep, %delay%
 	}
 return
