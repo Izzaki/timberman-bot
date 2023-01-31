@@ -2,8 +2,10 @@
 	Bot for TimbermanVS version: 23.08.2020
 	
 	Usage:
-	Ctrl+1 Start
-	Ctrl+r Stop & Reload
+	Ctrl+1 			Start
+	Ctrl+r 			Stop & Reload
+	Numpad+ 	Increase speed
+	Numpad- 	Decrease speed
 */
 
 #NoEnv
@@ -50,13 +52,11 @@ $^1::
 
 		if (branchFlag == BranchFlag.LEFT) {
 			hotkey := "{right}"
-			msgbox % hotkey
 		} else if (branchFlag == BranchFlag.RIGHT) {
 			hotkey := "{left}"
-			msgbox % hotkey
 		}
 
-		send, %last%
+		send, %hotkey%
 		sleep, %delay%
 	}
 return
